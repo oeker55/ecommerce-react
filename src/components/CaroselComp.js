@@ -2,8 +2,7 @@ import * as React from "react";
 import { useTheme } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import MobileStepper from "@mui/material/MobileStepper";
-import Paper from "@mui/material/Paper";
-import Typography from "@mui/material/Typography";
+
 import Button from "@mui/material/Button";
 import KeyboardArrowLeft from "@mui/icons-material/KeyboardArrowLeft";
 import KeyboardArrowRight from "@mui/icons-material/KeyboardArrowRight";
@@ -54,20 +53,9 @@ const CaroselComp = () => {
   };
 
   return (
-    <Box sx={{ maxWidth: 1500, flexGrow: 1 }}>
-      <Paper
-        square
-        elevation={6}
-        sx={{
-          display: "flex",
-          alignItems: "center",
-          height: 50,
-          pl: 2,
-          bgcolor: "#03cffc",
-        }}
-      >
-        <Typography position="relative" top={"720px"} left={"100px"} zIndex={"5"} variant="h3">{images[activeStep].label}</Typography>
-      </Paper>
+    <Box sx={{ maxWidth: 500, flexGrow: 1 }}>
+
+      
       <AutoPlaySwipeableViews
         axis={theme.direction === "rtl" ? "x-reverse" : "x"}
         index={activeStep}
@@ -78,9 +66,10 @@ const CaroselComp = () => {
           <div key={step.label}>
             {Math.abs(activeStep - index) <= 2 ? (
               <Box
+     
                 component="img"
                 sx={{
-                  height: 750,
+                  height: "100%",
                   display: "block",
                   maxWidth: 1500,
                   overflow: "hidden",

@@ -33,9 +33,11 @@ const LaptopCard = ({ laptop }) => {
   useEffect(() => {
     if(laptop.price){
       const StringPrice = laptop.price.toString()
-      const Sliced =StringPrice.slice(0,4)
+      const forSlice = StringPrice.length >= 5  ? 5 :4 
+      const Sliced =StringPrice.slice(0,forSlice)
       const Splited =Sliced.split("")
-      Splited.splice(1,0,",").toString()
+      const forSplice = forSlice === 5 ? 2 : 1
+      Splited.splice(forSplice,0,",").toString()
       Splited.join("")
     setPrice(Splited)
       

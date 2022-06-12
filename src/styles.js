@@ -8,7 +8,7 @@ const useStyles = makeStyles(() => ({
     color: "#1862d9",
     border:"5px solid #1862d9",
   
-    marginBottom: "25px",
+  
      textAlign: "center"
    
   },

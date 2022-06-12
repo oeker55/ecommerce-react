@@ -13,7 +13,7 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 
 import LaptopIcon from '@mui/icons-material/Laptop';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 
 const pages = [{name:'Home Page',toLink:"/"}, {name:'Laptops',toLink:"/laptops"}, {name:'Add New Laptop',toLink:"/laptops/addNewLaptop"}, {name:'Others',toLink:"/laptops/others"}];
@@ -68,9 +68,7 @@ const ResponsiveAppBar = () => {
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
               size="large"
-              aria-label="account of current user"
-              aria-controls="menu-appbar"
-              aria-haspopup="true"
+             
               onClick={handleOpenNavMenu}
               color="inherit"
             >
@@ -95,8 +93,8 @@ const ResponsiveAppBar = () => {
               }}
             >
               {pages.map((page,index) => (
-                <MenuItem key={index}   onClick={()=>{navigate(`${page.toLink}`)}}>
-                  <Typography  textAlign="center">{page.name}</Typography>
+                <MenuItem key={index}   onClick={handleCloseNavMenu}>
+                  <Typography sx={{textDecoration:"none" ,listStyle:"none", color:"black"}} component={Link} to={`${page.toLink}`} textAlign="center">{page.name}</Typography>
                 </MenuItem>
               ))}
             </Menu>

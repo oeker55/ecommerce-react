@@ -1,10 +1,7 @@
-import * as React from "react";
-
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import LinearProgress from "@mui/material/LinearProgress";
-
 import { useEffect } from "react";
 import LaptopCard from "../LaptopCard";
 import { showLaptops } from "../../actions/laptopActions";
@@ -26,8 +23,9 @@ const LaptopsPage = () => {
   return (
     <div>
       <Container maxWidth="lg" component="main">
-        <Typography variant="h2" color="#613707" >You Are Looking For
-All Products Are Here!!!</Typography>
+        <Typography variant="h6" color="#613707">
+          You Are Looking For All Products Are Here!!!
+        </Typography>
         <Grid container spacing={5} alignItems="flex-end">
           <Grid item xs={12} sx={{ textAlign: "center", margin: "0 auto" }}>
             {fetching ? (

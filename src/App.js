@@ -1,24 +1,19 @@
-import React, { useState } from 'react'
+import React from 'react'
 import {Routes, Route} from "react-router-dom"
 import CssBaseline from "@mui/material/CssBaseline";
 import GlobalStyles from "@mui/material/GlobalStyles";
 import Container from "@mui/material/Container";
-
-
 import HomePage from './components/pages/HomePage'
 import LaptopsPage from './components/pages/LaptopsPage'
 import AddLaptopPage from './components/pages/AddLaptopPage'
 import OthersPage from "./components/pages/OthersPage";
-
-
 import AppBarComp from "./components/AppBarComp";
 import FooterComp from "./components/FooterComp";
 
- 
 
 
 const App = () => {
-  const [currentId , setCurrrentId] = useState("boş")
+ 
   return (
     <div >
       
@@ -34,7 +29,7 @@ const App = () => {
       <Container sx={{paddingTop:"5rem"}}>
       <Routes>
         <Route path='/' element={<HomePage/>}/>
-        <Route path='/laptops' element={<LaptopsPage currentId={currentId} setCurrrentId={setCurrrentId}/>}/>
+        <Route path='/laptops' element={<LaptopsPage />}/>
         <Route path='/laptops/addNewLaptop' element={<AddLaptopPage/>}/>
         <Route path='/laptops/others' element={<OthersPage/>}/>
         <Route path='/laptops/addNewLaptop/:id' element={<AddLaptopPage/>}/>
