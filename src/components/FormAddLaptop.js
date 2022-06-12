@@ -93,29 +93,19 @@ export const FormAddLaptop = () => {
   return (
   
    
-    <Container
-      maxWidth="sm"
-      sx={{
-        border: "5px solid #757ce8",
-        borderRadius: "10px",
-        padding: "20px",
-      }}
-    >
-      <Paper sx={{ border: "blue" }}>
-        <form onSubmit={handleSubmit}>
+    <Container maxWidth="sm">
+      <Paper elevation={8} sx={{  borderRadius: "10px", border: "blue" }}>
+        <form autoComplete="off" onSubmit={handleSubmit}>
           <Typography
 
-          sx={{marginBottom:"15px"}}
-          
-            className={classes.formHeader}
-            variant="h4"
+          sx={{marginBottom:"15px" ,color: "#1862d9", textAlign: "center"}} variant="h6"
           >
             {" "}
             {id? "Edit":"Add New"} Laptop{" "}
           </Typography>
 
           <TextField
-            sx={{ marginBottom: "15px" }}
+            sx={{padding:"10px", marginBottom: "15px" }}
             color="success"
             size="small"
             value={laptop.title}
@@ -124,7 +114,7 @@ export const FormAddLaptop = () => {
             label="Name"
           />
           <TextField
-            sx={{ marginBottom: "15px" }}
+            sx={{padding:"10px", marginBottom: "15px" }}
             color="success"
             size="small"
             value={laptop.cover}
@@ -137,7 +127,7 @@ export const FormAddLaptop = () => {
           </Box>
 
           <TextField
-            sx={{ marginBottom: "15px" }}
+            sx={{padding:"10px", marginBottom: "15px" }}
             color="success"
             size="small"
             value={laptop.brand}
@@ -146,7 +136,7 @@ export const FormAddLaptop = () => {
             label="Brand name"
           />
           <TextField
-            sx={{ marginBottom: "15px" }}
+            sx={{padding:"10px", marginBottom: "15px" }}
             color="success"
             size="small"
             value={laptop.cpu}
@@ -156,7 +146,7 @@ export const FormAddLaptop = () => {
           />
 
           <TextField
-            sx={{ marginBottom: "15px" }}
+            sx={{padding:"10px", marginBottom: "15px" }}
             color="success"
             size="small"
             value={laptop.gpu}
@@ -165,7 +155,7 @@ export const FormAddLaptop = () => {
             label="Graphic Card"
           />
           <TextField
-            sx={{ marginBottom: "15px" }}
+            sx={{padding:"10px", marginBottom: "15px" }}
             color="success"
             size="small"
             value={laptop.ssd_memory}
@@ -176,7 +166,7 @@ export const FormAddLaptop = () => {
             label="SSD Memory"
           />
           <TextField
-            sx={{ marginBottom: "15px" }}
+            sx={{padding:"10px", marginBottom: "15px" }}
             color="success"
             size="small"
             value={laptop.ram_memory}
@@ -187,7 +177,7 @@ export const FormAddLaptop = () => {
             label="RAM Memory"
           />
           <TextField
-            sx={{ marginBottom: "15px" }}
+            sx={{padding:"10px", marginBottom: "15px" }}
             color="success"
             size="small"
             value={laptop.os}
@@ -196,7 +186,7 @@ export const FormAddLaptop = () => {
             label="Operating System"
           />
           <TextField
-            sx={{ marginBottom: "15px" }}
+            sx={{padding:"10px", marginBottom: "15px" }}
             color="success"
             size="small"
             value={laptop.price}

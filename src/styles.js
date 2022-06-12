@@ -4,9 +4,9 @@ import { makeStyles } from "@mui/styles";
 
 const useStyles = makeStyles(() => ({
   formHeader : {
-    marginBottom :"25px",
+  
     color: "#1862d9",
-    border:"5px solid #1862d9",
+   
   
   
      textAlign: "center"
